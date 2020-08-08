@@ -84,7 +84,6 @@ class Hangman extends Component {
     let gameControl
     if(nWrong < maxWrong){
       gameControl = <div>
-        <img src={images[nWrong]} alt={`${nWrong} wrong guesses`}/>
         <h3>{isWin ? `Yippee you win :)` : `Wrong Guesses : ${nWrong}` }</h3>
         <p className='Hangman-word'>{this.guessedWord()}</p>
         <p className='Hangman-btns'>{!isWin && this.generateButtons()}</p>
@@ -100,18 +99,20 @@ class Hangman extends Component {
 
   /** render: render game */
   render() {
-    const { answer } = this.state
+    const { nWrong, answer } = this.state
     const hints = 
       <span className='Hangman-hint'>
           {answer[0] + `${'_'.repeat(answer.length - 2)}`
           + answer[answer.length - 1]}
       </span>
+    const isWin = this.guessedWord().join('') === answer
     const restart = <button id='reset' onClick={this.reset}>Restart</button>
     
     return (
       <div className='Hangman'>
         <div className='Hangman-column'>
           <h1>Hangman</h1>
+          {!isWin && <img src={this.props.images[nWrong]} alt={`${nWrong} wrong guesses`}/>}
           {this.gameState()}
         </div>
         <div className='Hangman-column'>
