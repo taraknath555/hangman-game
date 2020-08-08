@@ -1,0 +1,87 @@
+.Hangman {
+  width: 400px;
+  color: black;
+  text-align: center;
+  display:flex;
+  zoom: 0.8;
+}
+
+.Hangman-column{
+  flex:50%
+}
+
+.Hangman img {
+  border: 10px solid white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.27),
+    0 0 40px rgba(0, 0, 0, 0.06) inset;
+  width: 200px;
+}
+
+.Hangman h1 {
+  font-size: 3rem;
+  font-weight: 100;
+  margin-bottom: 0.1em;
+  margin-top: 0;
+}
+
+.Hangman h3{
+  margin: 0.5em 0 0.3em 0;
+}
+
+.Hangman-hint{
+  letter-spacing: 1em;
+}
+
+.Hangman-game-resource {
+  margin-top:5em;
+  margin-left: 10em;
+}
+
+.Hangman-word {
+  letter-spacing: 1em;
+  margin: 0.2em -1em 0.3em 0;
+  font-size: 2rem;
+}
+
+.Hangman-btns {
+  text-align: center;
+  display: inline-block;
+  width: 250px;
+  margin-top:0.6em;
+  margin-left: 0.3em;
+}
+.Hangman button {
+  border: none;
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  width:30px;
+  margin: 5px 2px 2px 2px;
+  letter-spacing: 1px;
+  outline: none;
+  background-color: #00bcd4 ;;
+  color: #fff;
+  box-shadow: 0 6px #0097a7;
+  border-radius: 5px;
+  padding-top: 4px;
+}
+
+.Hangman button:hover {
+  background-color: #0097a7;
+}
+
+.Hangman button:disabled {
+  background: #bdbdbd;
+  color: #eeeeee;
+  box-shadow: 0 6px #9e9e9e;
+}
+
+#reset{
+  width:auto;
+  background-color: #ffc107;
+  box-shadow: 0 6px #ff9800;
+}
+
+#reset:hover{
+  background-color: #ff9800
+}
